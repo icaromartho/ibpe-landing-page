@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #2f343a;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #2f343a;
+}
+
+::selection {
+  background: rgba(242, 92, 5, 0.18);
+  color: #2f343a;
+}
+
+.technical-grid {
+  background-image:
+    linear-gradient(to right, rgba(47, 52, 58, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(47, 52, 58, 0.06) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.hex-corner {
+  clip-path: polygon(24% 0, 100% 0, 100% 76%, 76% 100%, 0 100%, 0 24%);
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ibpe-orange;
+}
+
+@layer components {
+  .form-input {
+    @apply w-full border border-ibpe-line bg-white px-4 py-3 text-sm font-semibold text-ibpe-dark outline-none transition placeholder:text-ibpe-muted/60 hover:border-ibpe-orange/50 focus:border-ibpe-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ibpe-orange;
+  }
+}
